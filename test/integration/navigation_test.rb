@@ -5,7 +5,9 @@ class NavigationTest < ActionDispatch::IntegrationTest
 
   test "I see list of tables when I visit rails_dba dashboard" do
     get '/rails_dba'
+
     assert assigns(:tables)
+    assert_select 'h2', 'Tables'
   end
 end
 
