@@ -8,6 +8,11 @@ class NavigationTest < ActionDispatch::IntegrationTest
 
     assert assigns(:tables)
     assert_select 'h2', 'Tables'
+    assert_select 'ul.tables li', 'users'
+  end
+
+  test 'I see table title, column names and values when I visit show table page' do
+
   end
 end
 

@@ -1,3 +1,7 @@
 <h2>Tables</h2>
 
-<%= @tables.to_json %>
+<ul class="tables">
+  <% @tables.each do |table| %>
+    <li><%= link_to table, '#' %></li>
+  <% end -%>
+</ul>
