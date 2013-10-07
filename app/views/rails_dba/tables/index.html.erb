@@ -2,6 +2,6 @@
 
 <ul class="tables">
   <% @tables.each do |table| %>
-    <li><%= link_to table, '#' %></li>
+    <li><%= link_to table, table_path(table) %></li>
   <% end -%>
 </ul>
