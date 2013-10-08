@@ -1,18 +1,20 @@
-<h2><%= @table.name %></h2>
+<h2>Schema for '<%= @table.name %>' table</h2>
+
+<%= link_to "Entries", table_entries_path(@table) %>
 
 <table>
   <thead>
     <tr>
-      <% @table.columns.each do |column| %>
-        <th><%= column.name %></th>
+      <% @table.column_properties.each do |key| %>
+        <th><%= key %></th>
       <% end %>
     </tr>
   </thead>
   <tbody>
-    <% @table.records.each do |record| %>
+    <% @table.columns.each do |col| %>
       <tr>
-        <% @table.columns.map(&:name).each do |key| %>
-          <td class="<%= key %>"><%= record[key] %></td>
+        <% @table.column_properties.each do |key| %>
+          <td class="<%= key %>"><%= col.send(key) %></td>
         <% end %>
       </tr>
     <% end %>

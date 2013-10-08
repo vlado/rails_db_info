@@ -11,8 +11,12 @@ module RailsDba
       connection.columns(name)
     end
 
-    def records
-      connection.exec_query("SELECT * FROM #{name}")
+    def column_properties
+      %w(name sql_type null limit precision scale type default primary coder)
+    end
+
+    def to_param
+      name
     end
 
 
@@ -21,10 +25,5 @@ module RailsDba
     def connection
       ActiveRecord::Base.connection
     end
-
-    def model
-      name.singularize.humanize.constantize
-    end
-
   end
 end

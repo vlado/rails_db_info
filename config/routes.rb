@@ -1,4 +1,6 @@
 RailsDba::Engine.routes.draw do
   root :to => 'tables#index'
-  resources :tables
+  resources :tables, only: [:index, :show] do
+    get 'entries'
+  end
 end

@@ -1,0 +1,24 @@
+<h2>Entries in '<%= @table.name %>' table</h2>
+
+<%= link_to "Schema", table_path(@table) %>
+
+<table>
+  <thead>
+    <tr>
+      <% @table.columns.each do |column| %>
+        <th><%= column.name %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% @entries.each do |record| %>
+      <tr>
+        <% @table.columns.map(&:name).each do |key| %>
+          <td class="<%= key %>"><%= record[key] %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate_table_entries @entries %>

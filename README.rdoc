@@ -1,3 +1,9 @@
 = RailsDba
 
+
+TODO:
+
+* Config option for per page
+* Will paginate, Kaminari support
+
 This project rocks and uses MIT-LICENSE.
