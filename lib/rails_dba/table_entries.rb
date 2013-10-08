@@ -41,7 +41,7 @@ module RailsDba
     private
 
     def count
-      connection.exec_query("SELECT COUNT(*) FROM #{table.name}").rows.flatten.last
+      connection.exec_query("SELECT COUNT(*) FROM #{table.name}").rows.flatten.last.to_i
     end
 
     def connection
