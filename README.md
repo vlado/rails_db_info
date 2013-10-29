@@ -1,4 +1,4 @@
-# RailsDbInfo
+# Rails database info
 
 Show database info in your Rails app by visiting `http://localhost:3000/rails/db/info`
 
