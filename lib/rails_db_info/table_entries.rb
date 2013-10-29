@@ -1,4 +1,4 @@
-module RailsDba
+module RailsDbInfo
   class TableEntries
 
     attr_reader :table

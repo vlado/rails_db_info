@@ -1,4 +1,4 @@
-module RailsDba
+module RailsDbInfo
   module TablesHelper
   end
 end

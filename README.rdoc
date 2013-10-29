@@ -1,4 +1,4 @@
-= RailsDba
+= RailsDbInfo
 
 
 TODO:

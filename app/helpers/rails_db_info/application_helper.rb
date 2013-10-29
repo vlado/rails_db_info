@@ -1,4 +1,4 @@
-module RailsDba
+module RailsDbInfo
   module ApplicationHelper
 
     def paginate_table_entries(entries)

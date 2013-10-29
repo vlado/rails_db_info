@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :rails_dba do
+# task :rails_db_info do
 #   # Task goes here
 # end

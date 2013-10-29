@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount RailsDba::Engine => "/rails_dba"
+  mount RailsDbInfo::Engine => "/rails_db_info"
 end

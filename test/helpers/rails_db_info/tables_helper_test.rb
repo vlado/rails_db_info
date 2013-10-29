@@ -1,6 +1,6 @@
 require 'test_helper'
 
-module RailsDba
+module RailsDbInfo
   class TablesHelperTest < ActionView::TestCase
   end
 end
