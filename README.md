@@ -6,9 +6,11 @@ Visit `http://localhost:3000/rails/db/info` to quickly see info about your datab
 
 Add this to the development group in your Gemfile
 
-	group :development do
-  	gem 'rails_db_info'
-	end
+```ruby
+group :development do
+  gem 'rails_db_info'
+end
+```
 
 Run `bundle install`
 
