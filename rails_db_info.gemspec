@@ -7,11 +7,11 @@ require "rails_db_info/version"
 Gem::Specification.new do |s|
   s.name        = "rails_db_info"
   s.version     = RailsDbInfo::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RailsDbInfo."
-  s.description = "TODO: Description of RailsDbInfo."
+  s.authors     = ["Vlado Cingel"]
+  s.email       = ["vladocingel@gmail.com"]
+  s.homepage    = "https://github.com/vlado/rails_db_info"
+  s.summary     = "RailsDbInfo is a Rails engine that quickly shows the routes available"
+  s.description = "RailsDbInfo is a Rails engine that quickly shows the routes available"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
