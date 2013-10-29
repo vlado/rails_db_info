@@ -4,7 +4,7 @@ class NavigationTest < ActionDispatch::IntegrationTest
   # fixtures :all
 
   test "I see list of tables when I visit rails_db_info dashboard" do
-    get '/rails_db_info'
+    get '/rails/info/db'
 
     assert assigns(:tables)
     assert_select 'h2', 'Tables'
@@ -14,7 +14,7 @@ class NavigationTest < ActionDispatch::IntegrationTest
   end
 
   test 'I see table column details when I visit table page' do
-    get '/rails_db_info/tables/users'
+    get '/rails/info/db/tables/users'
 
     assert assigns(:table)
     assert_select 'h2', "Schema for 'users' table"
@@ -30,7 +30,7 @@ class NavigationTest < ActionDispatch::IntegrationTest
       { :username => 'ana', :email => 'ana@cingel.hr', :age => 34, :admin => false }
     ])
 
-    get '/rails_db_info/tables/users/entries'
+    get '/rails/info/db/tables/users/entries'
 
     assert assigns(:table)
     assert_select 'h2', "Entries in 'users' table"
@@ -47,22 +47,22 @@ class NavigationTest < ActionDispatch::IntegrationTest
       User.create(:username => "vlado#{i+1}", :email => "vlado#{i+1}@cingel.hr", :age => 33, :admin => true)
     end
 
-    get '/rails_db_info/tables/users/entries'
+    get '/rails/info/db/tables/users/entries'
     assert_equal 10, css_select('table tbody tr').size
     assert_select 'table tbody tr:first-child td.username', 'vlado1'
     assert_select 'table tbody tr:last-child td.username', 'vlado10'
 
-    get '/rails_db_info/tables/users/entries?page=1'
+    get '/rails/info/db/tables/users/entries?page=1'
     assert_equal 10, css_select('table tbody tr').size
     assert_select 'table tbody tr:first-child td.username', 'vlado1'
     assert_select 'table tbody tr:last-child td.username', 'vlado10'
 
-    get '/rails_db_info/tables/users/entries?page=2'
+    get '/rails/info/db/tables/users/entries?page=2'
     assert_equal 10, css_select('table tbody tr').size
     assert_select 'table tbody tr:first-child td.username', 'vlado11'
     assert_select 'table tbody tr:last-child td.username', 'vlado20'
 
-    get '/rails_db_info/tables/users/entries?page=3'
+    get '/rails/info/db/tables/users/entries?page=3'
     assert_equal 5, css_select('table tbody tr').size
     assert_select 'table tbody tr:first-child td.username', 'vlado21'
     assert_select 'table tbody tr:last-child td.username', 'vlado25'

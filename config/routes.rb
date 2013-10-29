@@ -4,3 +4,7 @@ RailsDbInfo::Engine.routes.draw do
     get 'entries'
   end
 end
+
+Rails.application.routes.draw do
+  mount RailsDbInfo::Engine => "/rails/info/db"
+end
