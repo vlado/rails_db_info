@@ -1,6 +1,6 @@
 # RailsDbInfo
 
-Show your database info by visiting `http://localhost:3000/rails/db/info`
+Show database info in your Rails app by visiting `http://localhost:3000/rails/db/info`
 
 ## Install
 
