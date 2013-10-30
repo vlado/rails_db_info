@@ -1,0 +1,14 @@
+<h1>
+  <%= link_to "Tables", tables_path %>
+  <% if @table %>
+    | <%= @table.name %>
+  <% end %>
+</h1>
+
+<% if @table %>
+  <ul class="table-menu">
+    <li><%= link_to 'Schema', table_path(@table) %></li>
+    <li><%= link_to 'Entries', table_entries_path(@table) %></li>
+    <li><< <%= link_to 'Back to all tables', tables_path %></li>
+  </ul>
+<% end %>

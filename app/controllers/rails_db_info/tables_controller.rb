@@ -15,7 +15,6 @@ module RailsDbInfo
 
     def entries
       @table = RailsDbInfo::Table.new(params[:table_id])
-
       @entries = RailsDbInfo::TableEntries.new(@table).paginate(:page => params[:page])
     end
   end

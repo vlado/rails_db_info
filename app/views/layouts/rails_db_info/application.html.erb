@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsDbInfo</title>
+  <title>Database Info</title>
   <%= stylesheet_link_tag    "rails_db_info/application", media: "all" %>
   <%= javascript_include_tag "rails_db_info/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<ul>
-  <li><%= link_to "Tables", tables_path %></li>
-</ul>
+<%= render 'rails_db_info/tables/header' %>
 
 <%= yield %>
 

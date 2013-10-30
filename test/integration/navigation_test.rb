@@ -7,7 +7,7 @@ class NavigationTest < ActionDispatch::IntegrationTest
     get '/rails/info/db'
 
     assert assigns(:tables)
-    assert_select 'h2', 'Tables'
+    assert_select 'h1', 'Tables'
     %w(schema_migrations users).each do |table|
       assert_select 'table.tables tr td', table
     end
@@ -17,7 +17,7 @@ class NavigationTest < ActionDispatch::IntegrationTest
     get '/rails/info/db/tables/users'
 
     assert assigns(:table)
-    assert_select 'h2', "Schema for 'users' table"
+    assert_select 'h1', /users/
     User.columns.each do |col|
       assert_select "table tr td.name", col.name
       assert_select "table tr td.sql_type", col.sql_type
@@ -33,7 +33,7 @@ class NavigationTest < ActionDispatch::IntegrationTest
     get '/rails/info/db/tables/users/entries'
 
     assert assigns(:table)
-    assert_select 'h2', "Entries in 'users' table"
+    assert_select 'h1', /users/
     User.column_names.each do |col|
       assert_select 'table thead tr:first-child th', col
     end

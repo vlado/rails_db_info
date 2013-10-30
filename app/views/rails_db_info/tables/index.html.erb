@@ -1,15 +1,17 @@
-<h2>Tables</h2>
-
 <table class="tables">
-  <tr>
-    <th>Table name</th>
-    <th colspan="2">&nbsp;</th>
-  </tr>
-  <% @tables.each do |table| %>
+  <thead>
     <tr>
-      <td><%= table %></td>
-      <td><%= link_to 'Schema', table_path(table) %></td>
-      <td><%= link_to 'Entries', table_entries_path(table) %></td>
+      <th>Table name</th>
+      <th colspan="2">&nbsp;</th>
     </tr>
-  <% end -%>
+  </thead>
+  <tbody>
+    <% @tables.each do |table| %>
+      <tr>
+        <td><%= table %></td>
+        <td><%= link_to 'Schema', table_path(table) %></td>
+        <td><%= link_to 'Entries', table_entries_path(table) %></td>
+      </tr>
+    <% end -%>
+  </tbody>
 </table>

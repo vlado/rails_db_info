@@ -1,13 +1,53 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+body { background-color: #fff; color: #333; }
+
+body, p, ol, ul, td {
+  font-family: helvetica, verdana, arial, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+h1 { padding-left: 10px; }
+
+table {
+  border: 1px solid #999;
+  border-spacing:   0;
+  border-collapse:  collapse;
+}
+table th {
+  border-bottom: 1px solid #999;
+  border: 1px solid #999;
+}
+table tbody tr:nth-child(even) {
+  background: #EEE
+}
+table tbody tr:nth-child(odd) {
+  background: #FFF
+}
+table tbody tr:hover {
+      background-color: #333;
+      color:            #FFF;
+}
+table td {
+    padding: 3px 10px;
+}
+table td {
+  border-left: 1px solid #DDD;
+}
+
+ul.table-menu {
+  list-style:none;
+  margin:0;
+  padding:0 0 10px 0;
+}
+ul.table-menu li {
+  display:inline;
+  padding:0 10px;
+}
+
+.pagination {
+  margin:10px;
+}
