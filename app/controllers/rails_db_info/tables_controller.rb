@@ -6,7 +6,7 @@ module RailsDbInfo
   class TablesController < ApplicationController
 
     def index
-      @tables = ActiveRecord::Base.connection.tables
+      @tables = ActiveRecord::Base.connection.tables.sort
     end
 
     def show
