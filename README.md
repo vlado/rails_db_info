@@ -1,4 +1,4 @@
-# Rails database info [![Build Status](https://travis-ci.org/vlado/rails_db_info.png)](https://travis-ci.org/vlado/rails_db_info)
+# Rails database info [![Build Status](https://travis-ci.org/vlado/rails_db_info.png)](https://travis-ci.org/vlado/rails_db_info) [![Code Climate](https://codeclimate.com/github/vlado/rails_db_info.png)](https://codeclimate.com/github/vlado/rails_db_info)
 
 Show database info in your Rails app by visiting `http://localhost:3000/rails/db/info`
 
