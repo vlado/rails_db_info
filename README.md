@@ -34,6 +34,14 @@ I was using [Annotate](https://github.com/ctran/annotate_models) to annotate my 
 4. Push to the branch (git push origin my-new-feature)
 5. Create new Pull Request
 
+## Running tests
+
+Make sure you have test database prepared `cd test/dummy; rake db:test:prepare`
+
+```
+$ rake
+```
+
 ## License
 
 This project rocks and uses MIT-LICENSE.
