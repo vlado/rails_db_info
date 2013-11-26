@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/vlado/rails_db_info"
   s.summary     = "RailsDbInfo is a Rails engine that quickly shows the database info"
   s.description = "RailsDbInfo is a Rails engine that quickly shows the database info"
+  s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
