@@ -29,7 +29,9 @@ I was using [Annotate](https://github.com/ctran/annotate_models) to annotate my 
 ## Todo / Ideas
 
 - [ ] Improve CSS
-- [ ] Add small bar (like miniprofiler has) at top of the page or add key listener(s). When triggered it would show database info. For example you are working on UsersController and when you press Cmd+D you users table info slides down.
+- [ ] Add small bar (like miniprofiler has) at top of the page or add key listener(s). When triggered it would show database info. For example you are working on UsersController and when you press Cmd+D users table info slides down.
+
+Contributions welcome :)
 
 ## Contributing
 
