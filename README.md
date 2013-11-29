@@ -26,6 +26,11 @@ Visit `http://localhost:3000/rails/info/db` and you will see your database schem
 
 I was using [Annotate](https://github.com/ctran/annotate_models) to annotate my models with schema info. When I saw [Sextant](https://github.com/schneems/sextant) I got an idea to create something similar for database and the rest is history :)
 
+## Todo / Ideas
+
+- [ ] Improve CSS
+- [ ] Add small bar (like miniprofiler has) at top of the page or add key listener(s). When triggered it would show database info. For example you are working on UsersController and when you press Cmd+D you users table info slides down.
+
 ## Contributing
 
 1. Fork it
