@@ -22,6 +22,17 @@ Run `bundle install`
 
 Visit `http://localhost:3000/rails/info/db` and you will see your database schema and values.
 
+If your `routes.rb` is somehow blocking the default route added by the gem, add it manually:
+```ruby
+Rails.application.routes.draw do
+  # Some routing code
+  if Rails.env.development?
+    mount RailsDbInfo::Engine => "/rails/info/db"
+  end
+  # Some routing code
+end
+```
+
 ## Why?
 
 I was using [Annotate](https://github.com/ctran/annotate_models) to annotate my models with schema info. When I saw [Sextant](https://github.com/schneems/sextant) I got an idea to create something similar for database and the rest is history :)
