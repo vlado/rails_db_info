@@ -22,7 +22,7 @@ Run `bundle install`
 
 Visit `http://localhost:3000/rails/info/db` and you will see your database schema and values.
 
-### Optional for users of catch-all routes
+### For users of catch-all routes
 
 If (and only if) you have catch all routes like `match '*path' => 'your_controller#your_action'` in your app already, you can manually add rails_db_info to your routes (config/routes.rb) **before** the catch-all routes like this.
 
