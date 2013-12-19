@@ -24,7 +24,7 @@ Visit `http://localhost:3000/rails/info/db` and you will see your database schem
 
 ### Optional for users of catch-all routes
 
-If (and only if) you have catch all routes like match '*not_found' => 'errors#handle404' in your app already, you can manually add rails_db_info to your routes (config/routes.rb) **before** the catch-all routes like this.
+If (and only if) you have catch all routes like `match '*path' => 'your_controller#your_action'` in your app already, you can manually add rails_db_info to your routes (config/routes.rb) **before** the catch-all routes like this.
 
 ```ruby
 mount_rails_db_info if Rails.env.development?
