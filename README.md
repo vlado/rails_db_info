@@ -22,15 +22,13 @@ Run `bundle install`
 
 Visit `http://localhost:3000/rails/info/db` and you will see your database schema and values.
 
-If your `routes.rb` is somehow blocking the default route added by the gem, add it manually:
+### Optional for users of catch-all routes
+
+If (and only if) you have catch all routes like match '*not_found' => 'errors#handle404' in your app already, you can manually add rails_db_info to your routes (config/routes.rb) **before** the catch-all routes like this.
+
 ```ruby
-Rails.application.routes.draw do
-  # Some routing code
-  if Rails.env.development?
-    mount RailsDbInfo::Engine => "/rails/info/db"
-  end
-  # Some routing code
-end
+mount_rails_db_info if Rails.env.development?
+match '*path' => 'your_controller#your_action'
 ```
 
 ## Why?

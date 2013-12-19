@@ -6,5 +6,5 @@ RailsDbInfo::Engine.routes.draw do
 end
 
 Rails.application.routes.draw do
-  mount RailsDbInfo::Engine => "/rails/info/db"
+  mount_rails_db_info
 end
