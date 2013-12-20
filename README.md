@@ -24,11 +24,14 @@ Visit `http://localhost:3000/rails/info/db` and you will see your database schem
 
 ### For users of catch-all routes
 
-If (and only if) you have catch all routes like `match '*path' => 'your_controller#your_action'` in your app already, you can manually add rails_db_info to your routes (config/routes.rb) **before** the catch-all routes like this.
+If (and only if) you have catch all routes like `get '*path' => 'your_controller#your_action'` in your app already, you can manually add rails_db_info to your routes (config/routes.rb) **before** the catch-all routes like this.
 
 ```ruby
-mount_rails_db_info if Rails.env.development?
-match '*path' => 'your_controller#your_action'
+if Rails.env.development?
+  mount_rails_db_info as: 'rails_db_info_engine'
+  # mount_rails_db_info is enough for rails version < 4
+end
+get '*path' => 'your_controller#your_action'
 ```
 
 ## Why?
