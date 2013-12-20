@@ -1,5 +1,5 @@
 require "rails_db_info/engine"
-require "rails/routes"
+require_relative "rails/routes"
 
 module RailsDbInfo
 end
