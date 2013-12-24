@@ -1,5 +1,13 @@
 source "https://rubygems.org"
 
+rails_version = if ENV['RAILS_VERSION']
+  { :github => 'rails/rails', :branch => ENV['RAILS_VERSION'] }
+else
+  '>= 3.1.0'
+end
+
+gem 'rails', rails_version
+
 # Declare your gem's dependencies in rails_db_info.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
