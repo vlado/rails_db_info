@@ -1,5 +1,9 @@
 source "https://rubygems.org"
 
+if ENV['RAILS_VERSION']
+  gem 'rails', github: 'rails/rails', branch: ENV['RAILS_VERSION']
+end
+
 # Declare your gem's dependencies in rails_db_info.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
