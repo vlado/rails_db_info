@@ -33,6 +33,6 @@ matrix:
     - rvm: 1.8.7
       env: "DB=sqlite"
     - rvm: 1.8.7
-    env: "RAILS_VERSION=4-0-stable"
+      env: "RAILS_VERSION=4-0-stable"
     - rvm: 1.8.7
       env: "RAILS_VERSION=master"
