@@ -23,8 +23,16 @@ script:
   - bundle exec rake
 
 matrix:
-  include:
+  exclude:
     - rvm: 1.8.7
-      env: "RAILS_VERSION=3-1-stable"
+      env: "CATCH_ALL_ROUTE=true"
     - rvm: 1.8.7
-      env: "RAILS_VERSION=3-2-stable"
+      env: "DB=mysql"
+    - rvm: 1.8.7
+      env: "DB=postgresql"
+    - rvm: 1.8.7
+      env: "DB=sqlite"
+    - rvm: 1.8.7
+    env: "RAILS_VERSION=4-0-stable"
+    - rvm: 1.8.7
+      env: "RAILS_VERSION=master"
