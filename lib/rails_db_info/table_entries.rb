@@ -14,6 +14,10 @@ module RailsDbInfo
       connection.exec_query("SELECT * FROM #{table.name} LIMIT #{per_page} OFFSET #{offset}")
     end
 
+    def first_page
+      (current_page == 1 ) ? nil : 1
+    end
+
     def next_page
       current_page < total_pages ? (current_page + 1) : nil
     end
@@ -27,6 +31,10 @@ module RailsDbInfo
 
     def previous_page
       current_page > 1 ? (current_page - 1) : nil
+    end
+
+    def last_page
+      (current_page == self.total_pages ) ? nil : self.total_pages
     end
 
     def total_entries
