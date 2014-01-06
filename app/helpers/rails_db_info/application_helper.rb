@@ -45,9 +45,7 @@ private
         (1..last_page).to_a
       end
 
-      pages = pages.uniq.select { |p| p > 0 && p <= last_page }
-
-      pages
+      pages.uniq.select { |p| p > 0 && p <= last_page }
     end
 
   end
