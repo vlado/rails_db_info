@@ -29,6 +29,14 @@ module RailsDbInfo
       current_page > 1 ? (current_page - 1) : nil
     end
 
+    def order(column_name)
+      if column_name
+        connection.exec_query("SELECT * FROM #{table.name} ORDER BY #{column_name} DESC")
+      else
+        connection.exec_query("SELECT * FROM #{table.name} ORDER BY id")
+      end
+    end
+
     def total_entries
       @total_entries ||= count
     end
