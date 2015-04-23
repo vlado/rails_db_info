@@ -12,7 +12,7 @@ module RailsDbInfo
     end
 
     def column_properties
-      %w(name sql_type null limit precision scale type default primary coder)
+      %w(name sql_type null limit precision scale type default)
     end
 
     def to_param
