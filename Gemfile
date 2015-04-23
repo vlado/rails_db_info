@@ -3,7 +3,7 @@ source "https://rubygems.org"
 rails_version = if ENV['RAILS_VERSION']
   { :github => 'rails/rails', :branch => ENV['RAILS_VERSION'] }
 else
-  '>= 3.1.0'
+  '>= 4.2.1'
 end
 
 gem 'rails', rails_version
