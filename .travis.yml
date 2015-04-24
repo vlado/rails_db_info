@@ -32,9 +32,24 @@ matrix:
     - rvm: 1.8.7
     - rvm: 1.9.3
     - gemfile: gemfiles/ruby-1.8.7.gemfile
+    - env: "CATCH_ALL_ROUTE=true"
+    - env: "DB=mysql"
+    - env: "DB=postgresql"
+    - env: "DB=sqlite"
 
   include:
     - rvm: 1.8.7
       gemfile: gemfiles/ruby-1.8.7.gemfile
     - rvm: 1.9.3
+      gemfile: gemfiles/rails_4-2-stable.gemfile
+    - rvm: 2.2.2
+      env: "CATCH_ALL_ROUTE=true"
+    - rvm: 2.2.2
+      env: "DB=mysql"
+      gemfile: gemfiles/rails_4-2-stable.gemfile
+    - rvm: 2.2.2
+      env: "DB=postgresql"
+      gemfile: gemfiles/rails_4-2-stable.gemfile
+    - rvm: 2.2.2
+      env: "DB=sqlite"
       gemfile: gemfiles/rails_4-2-stable.gemfile
