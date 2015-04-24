@@ -1,9 +1,8 @@
-require_dependency "rails_db_info/application_controller"
 require 'rails_db_info/table'
 require 'rails_db_info/table_entries'
 
 module RailsDbInfo
-  class TablesController < ApplicationController
+  class TablesController < RailsDbInfo::ApplicationController
 
     def index
       @tables = ActiveRecord::Base.connection.tables.sort
