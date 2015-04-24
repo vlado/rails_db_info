@@ -56,10 +56,16 @@ Contributions welcome :)
 
 ## Running tests
 
-Make sure you have test database prepared `cd test/dummy; rake db:test:prepare`
+```
+$ RAILS_ENV=test bundle exec rake db:migrate
+$ bundle exec rake
+```
+
+To run tests for specific rails version use custom Gemfile from [gemfiles](https://github.com/vlado/rails_db_info/tree/master/gemfiles) folder
 
 ```
-$ rake
+$ BUNDLE_GEMFILE=gemfiles/rails_3-2-stable.gemfile bundle install
+$ BUNDLE_GEMFILE=gemfiles/rails_3-2-stable.gemfile bundle exec rake
 ```
 
 ## License

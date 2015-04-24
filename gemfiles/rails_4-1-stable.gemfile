@@ -1,0 +1,4 @@
+eval Pathname.new(__FILE__).join("../../Gemfile").read
+
+gem "rails", github: "rails/rails", branch: "4-1-stable"
+
