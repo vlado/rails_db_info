@@ -9,4 +9,3 @@ end
 require "rails_db_info/engine"
 RailsDbInfo.require_relative("rails/routes")
 
-
