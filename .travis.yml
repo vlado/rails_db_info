@@ -37,4 +37,4 @@ matrix:
     - rvm: 1.8.7
       gemfile: gemfiles/ruby-1.8.7.gemfile
     - rvm: 1.9.3
-    gemfile: gemfiles/rails_4-2-stable.gemfile
+      gemfile: gemfiles/rails_4-2-stable.gemfile
