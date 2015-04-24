@@ -47,6 +47,7 @@ matrix:
       env: "DB=postgresql"
     - rvm: 2.2.2
       env: "CATCH_ALL_ROUTE=true"
+      gemfile: gemfiles/rails_4-2-stable.gemfile
     - rvm: 2.2.2
       env: "DB=mysql"
       gemfile: gemfiles/rails_4-2-stable.gemfile
