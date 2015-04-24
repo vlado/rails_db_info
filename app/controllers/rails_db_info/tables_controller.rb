@@ -1,6 +1,3 @@
-require 'rails_db_info/table'
-require 'rails_db_info/table_entries'
-
 module RailsDbInfo
   class TablesController < RailsDbInfo::ApplicationController
 
