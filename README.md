@@ -1,6 +1,6 @@
 # Rails database info [![Build Status](https://travis-ci.org/vlado/rails_db_info.png)](https://travis-ci.org/vlado/rails_db_info) [![Code Climate](https://codeclimate.com/github/vlado/rails_db_info.png)](https://codeclimate.com/github/vlado/rails_db_info) [![Gem Version](https://badge.fury.io/rb/rails_db_info.png)](http://badge.fury.io/rb/rails_db_info)
 
-Rails database info gem adds an html endpoint to your Rails application which will give you a quick display of your database schema and contents for reference at `http://localhost:3000/rails/info/db`
+Adds an html endpoint to your Rails application which will give you a quick display of your database schema and contents for reference at `http://localhost:3000/rails/info/db`
 
 **Demo** available at [http://rails-db-info-demo.herokuapp.com](http://rails-db-info-demo.herokuapp.com)
 
