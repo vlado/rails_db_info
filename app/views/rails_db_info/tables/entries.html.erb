@@ -2,7 +2,7 @@
   <thead>
     <tr>
       <% @table.columns.each do |column| %>
-        <th><%= column.name %></th>
+        <th><%= link_to column.name, :sort => "#{column.name}" %></th>
       <% end %>
     </tr>
   </thead>
