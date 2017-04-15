@@ -20,6 +20,12 @@ end
 
 Run `bundle install`
 
+Modify routes.rb
+
+```ruby
+  mount RailsDbInfo::Engine => "/rails/info/db"
+```
+
 Visit `http://localhost:3000/rails/info/db` and you will see your database schema and values.
 
 ### For users of catch-all routes
