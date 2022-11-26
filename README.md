@@ -2,8 +2,6 @@
 
 Adds an html endpoint to your Rails application which will give you a quick display of your database schema and contents for reference at `http://localhost:3000/rails/info/db`
 
-**Demo** available at [http://rails-db-info-demo.herokuapp.com](http://rails-db-info-demo.herokuapp.com)
-
 ![Schema](https://raw.github.com/vlado/rails_db_info/screenshots/screenshots/schema.png)
 
 ![Entries](https://raw.github.com/vlado/rails_db_info/screenshots/screenshots/entries.png)
